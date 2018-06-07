@@ -15,6 +15,7 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
   <!-- Favicon
@@ -26,6 +27,15 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div id="navbar" class="navbar">
+    <a href="/" class="logo"></a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="onClickNavbarIcon()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
 
   <div class="section hero">
     <div class="container">
@@ -86,5 +96,16 @@
     </div>
   </div>
   <script src="./index.js"></script>
+  <script>
+    function onClickNavbarIcon() {
+      var x = document.getElementById("navbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+
+  </script>
 </body>
 </html>
